@@ -1,12 +1,5 @@
-import { useEffect, useState } from "react";
 
-export default function About() {
-  const [aboutImg, setAboutImg] = useState(null);
-  useEffect(() => {
-    const about = new Image();
-    about.src = "About-photo.png";
-    about.onload = () => setAboutImg(about.src);
-  }, []);
+export default function About({aboutImg}) {
 
   const config = {
     line1:

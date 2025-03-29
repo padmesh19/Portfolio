@@ -1,13 +1,6 @@
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
-import { useEffect, useState } from "react";
 
-export default function Contact() {
-  const [resumeImg, setResumeImg] = useState(null);
-  useEffect(() => {
-      const resume = new Image();
-      resume.src = "resume.png";
-      resume.onload = () => setResumeImg(resume.src);
-  }, []);
+export default function Contact({resumeImg}) {
   
   return (
     <div className="w-full h-screen pt-4 flex flex-col justify-center items-center">

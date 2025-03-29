@@ -1,14 +1,6 @@
-import { useEffect, useState } from "react";
 
-export default function Hero() {
-  const [profileImg, setProfileImg] = useState(null);
-
-  useEffect(() => {
-    const profile = new Image();
-    profile.src = "Profile_image.jpg";
-    profile.onload = () => setProfileImg(profile.src);
-  }, []);
-
+export default function Hero({profileImg}) {
+  
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center gap-8">
       {profileImg && (
