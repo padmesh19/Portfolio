@@ -45,6 +45,7 @@ function App() {
 
     Promise.all(preload).then(() => setLoaded(true));
   }, []);
+  
   return (
     <BrowserRouter>
       {!loaded ? (

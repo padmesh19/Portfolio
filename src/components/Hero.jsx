@@ -1,7 +1,22 @@
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const [profileImg, setProfileImg] = useState(null);
+
+  useEffect(() => {
+    const profile = new Image();
+    profile.src = "Profile_image.jpg";
+    profile.onload = () => setProfileImg(profile.src);
+  }, []);
+
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center gap-8">
-      <img src="Profile_image.jpg" className="w-44 lg:w-56 rounded-full" />
+      {profileImg && (
+        <img
+          src={profileImg}
+          className="w-44 lg:w-56 rounded-full"
+        />
+      )}
       <h2 className="text-6xl uppercase w-[80%] comic text-slate-900 dark:text-slate-100 text-center leading-snug font-bold">
         Hey, <span className="text-amber-600">I'm Padmesh</span>
       </h2>
