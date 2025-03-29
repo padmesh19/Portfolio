@@ -48,7 +48,7 @@ function App() {
   return (
     <BrowserRouter>
       {!loaded ? (
-        <div className="App w-full max-w-screen-2xl mx-auto min-h-screen m-0 bg-gradient-to-br from-stone-400 dark:from-slate-900 dark:to-slate-700 to-yellow-200 flex justify-items-center">
+        <div className="App w-full max-w-screen-2xl mx-auto min-h-screen m-0 bg-gradient-to-br from-stone-400 dark:from-slate-900 dark:to-slate-700 to-yellow-200 flex justify-center items-center">
           <h1 className="text-2xl text-slate-900 dark:text-slate-100">Loading...</h1>
         </div>
       ) : (
