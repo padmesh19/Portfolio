@@ -1,4 +1,13 @@
+import { useEffect, useState } from "react";
+
 export default function About() {
+  const [aboutImg, setAboutImg] = useState(null);
+  useEffect(() => {
+    const about = new Image();
+    about.src = "About-photo.png";
+    about.onload = () => setAboutImg(about.src);
+  }, []);
+
   const config = {
     line1:
       "Aspiring Full Stack Developer with a strong foundation in the MERN stack and a passion for building responsive, user-friendly web applications.",
@@ -11,10 +20,16 @@ export default function About() {
     line5:
       "A quick learner with a growth mindset, eager to contribute to impactful software solutions.",
   };
+
   return (
     <div className="w-full h-screen pt-4 flex flex-col justify-center items-center">
       <div className="lg:w-[75%] w-[90%] bg-slate-100/50 dark:bg-slate-700 shadow-2xl mt-20 mb-12 p-8 h-[80vh] overflow-y-scroll no-scrollbar rounded-md grid grid-cols-1 lg:grid-cols-5 justify-items-center items-center gap-8">
-        <img src="About-photo.png" className="max-w-96 min-w-80 w-full h-fit lg:col-span-2" />
+        {aboutImg && (
+          <img
+            src={aboutImg}
+            className="max-w-96 min-w-80 w-full h-fit lg:col-span-2"
+          />
+        )}
         <div className="w-full flex flex-col gap-10 lg:col-span-3">
           <h4 className="text-2xl tracking-wide lg:text-3xl font-bold uppercase dark:text-slate-50 text-slate-900">
             About Me

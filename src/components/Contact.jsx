@@ -1,15 +1,21 @@
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
-  const resume = {
-    download:
-      "https://docs.google.com/document/d/1mUjt5AC16NkuRBqBESNTqQOccebo-OcMX7k0hjT0p5Y/edit?usp=drive_link",
-  };
+  const [resumeImg, setResumeImg] = useState(null);
+  useEffect(() => {
+      const resume = new Image();
+      resume.src = "resume.png";
+      resume.onload = () => setResumeImg(resume.src);
+  }, []);
+  
   return (
     <div className="w-full h-screen pt-4 flex flex-col justify-center items-center">
       <div className="lg:w-[75%] w-[90%] bg-slate-100/50 dark:bg-slate-700 shadow-2xl mt-20 mb-12 p-8 h-[80vh] overflow-y-scroll no-scrollbar rounded-md grid grid-cols-1 lg:grid-cols-6 justify-items-center gap-4">
         <div className="col-span-1 lg:col-span-2 flex flex-col justify-center items-center gap-12 ">
-          <img src="resume.png" className="w-56" />
+          {resumeImg && (
+            <img src={resumeImg} className="w-56" />
+          )}
           <div className="flex flex-col justify-center items-center gap-4">
             <h4 className="text-slate-800 text-center dark:text-slate-100 text-xl font-semibold">
               Download My Resume Here
