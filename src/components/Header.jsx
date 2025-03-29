@@ -15,7 +15,6 @@ export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
   const pathname = location.pathname.slice(1) || "/";
-  console.log(pathname)
   const [activeMenu, setActiveMenu] = useState(pathname);
 
   const toggleDarkMode = () => {
