@@ -29,11 +29,11 @@ const images = [
             Tech Skills
           </h2>
         </div>
-        <div className="flex flex-wrap justify-around sm:justify-center items-center gap-8 transition-all">
+        <div className="flex flex-wrap justify-around sm:justify-center items-center gap-8 transition-all ">
           {images.map((src, index) => (
             <div
               key={index}
-              className="bg-white md:w-36 w-28 lg:w-44 hover:scale-95 shadow-lg flex justify-center items-center rounded-md"
+              className="bg-white md:w-36 w-28 lg:w-44 hover:scale-105 duration-200 shadow-lg flex justify-center items-center rounded-md"
             >
               <img src={src} className="rounded-md w-full" />
             </div>

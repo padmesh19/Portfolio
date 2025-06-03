@@ -81,20 +81,20 @@ export default function Project() {
             Projects
           </h2>
         </div>
-        <div className="grid justify-center content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid justify-center content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all">
           {config.map((project) => (
             <div
               key={project.id}
-              className="dark:bg-slate-950 bg-slate-500/50 p-2 pb-4 w-full rounded-sm flex flex-col gap-4 shadow-lg"
+              className="dark:bg-slate-950 bg-slate-300 hover:-translate-y-2 p-2 pb-4 w-full hover:shadow-gray-700 dark:hover:shadow-black hover:shadow-xl duration-300 rounded-sm flex flex-col gap-4"
             >
               <img
                 src={project.bannerSrc}
                 alt={project.altText}
-                className="rounded-sm w-full min-h-60"
+                className="rounded-sm w-full outline aspect-video"
               />
               <div className="px-2 h-full flex flex-col justify-between gap-4">
                 <div className="flex flex-col justify-center gap-2">
-                  <h3 className="text-xl text-center font-bold dark:text-blue-800 text-blue-900">
+                  <h3 className="text-xl text-center font-bold dark:text-blue-800 text-indigo-950">
                     {project.heading}
                   </h3>
                   <p className="text-sm font-semibold dark:text-gray-500 text-gray-800 text-justify">
@@ -109,7 +109,7 @@ export default function Project() {
                     {project.techStack.map((tech, index) => (
                       <li
                         key={index}
-                        className="text-xs font-semibold bg-slate-200 dark:bg-stone-400 px-2 py-1 rounded-sm uppercase text-gray-900"
+                        className="text-xs font-semibold bg-slate-500 dark:bg-stone-400 px-2 py-1 rounded-sm uppercase text-gray-900"
                       >
                         {tech}
                       </li>
