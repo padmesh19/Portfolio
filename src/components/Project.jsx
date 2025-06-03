@@ -16,8 +16,8 @@ export default function Project() {
         "Chart.js",
         "MFA",
       ],
-      previewLink: "",
-      sourceLink: "",
+      previewLink: "https://finance-manager-padmesh.netlify.app/",
+      sourceLink: "https://github.com/padmesh19/Personal-Finance-Manager",
     },
     {
       id: 2,
@@ -34,8 +34,8 @@ export default function Project() {
         "Clerk Authentication",
         "Stripe",
       ],
-      previewLink: "http://google.com",
-      sourceLink: "http://google.com",
+      previewLink: "https://padmesh-learnix.netlify.app/",
+      sourceLink: "https://github.com/padmesh19/Learnix",
     },
     {
       id: 3,
@@ -63,8 +63,8 @@ export default function Project() {
         "JWT",
         "Socket.IO",
       ],
-      previewLink: "http://google.com",
-      sourceLink: "http://google.com",
+      previewLink: "https://padmesh-chatify-app.netlify.app/login",
+      sourceLink: "https://github.com/padmesh19/Chatify",
     },
   ];
   return (

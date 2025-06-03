@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App w-full scroll-smooth">
+      <div className="App w-full scroll-smooth bg-gray-700">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
