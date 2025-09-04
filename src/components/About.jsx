@@ -1,23 +1,15 @@
+import { Key } from "lucide-react";
+import { useContext } from "react";
+import { AppContext } from "../App";
 
 export default function About() {
-
-  const config = {
-    line1:
-      "Aspiring Full Stack Developer with a strong foundation in the MERN stack and a passion for building responsive, user-friendly web applications.",
-    line2:
-      "Completed Full Stack Development training at Guvi Geek Networks, focusing on real-world projects and modern technologies.",
-    line3:
-      "Hands-on experience in developing RESTful APIs, managing databases with MongoDB, and creating interactive UIs using React.",
-    line4:
-      "Holds a B.E. in Computer Science Engineering from NSN College of Engineering, Karur, with an 8.6 CGPA.",
-    line5:
-      "A quick learner with a growth mindset, eager to contribute to impactful software solutions.",
-  };
-
+  console.log("about");
+const {about} = useContext(AppContext)
+  
   return (
     <section
       id="about"
-      className="w-full min-h-[740px] h-full dark:bg-gray-900 bg-gray-400/70 flex flex-col justify-start items-center"
+      className="w-full min-h-screen h-full dark:bg-gray-900 bg-purple-200 flex flex-col justify-start items-center"
     >
       <div className="w-[90%] h-full mt-12 mb-12 py-8 rounded-md flex flex-col items-center gap-6 md:gap-12">
         <div className="flex flex-col justify-center items-center gap-2">
@@ -35,11 +27,9 @@ export default function About() {
           />
           <div className="w-full">
             <ul className="text-lg text-justify lg:text-lg font-medium text-slate-700 dark:text-slate-300 flex flex-col gap-4">
-              <li>{config.line1}</li>
-              <li>{config.line2}</li>
-              <li>{config.line3}</li>
-              <li>{config.line4}</li>
-              <li>{config.line5}</li>
+              {about.map((line, index) => (
+               <li key={index}>{line}</li>
+              ))}
             </ul>
           </div>
         </div>

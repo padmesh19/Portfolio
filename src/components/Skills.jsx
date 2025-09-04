@@ -1,24 +1,13 @@
+import { useContext } from "react";
+import { AppContext } from "../App";
+
 export default function Skill() {
-const images = [
-  "html.png",
-  "css.png",
-  "tailwind.png",
-  "javascript.png",
-  "react.png",
-  "redux.png",
-  "nodejs.png",
-  "express.png",
-  "mysql.png",
-  "mongodb.png",
-  "mongoose.png",
-  "git.png",
-  "postman.png",
-  "vscode.png",
-];
+  console.log("Skills");
+  const { images } = useContext(AppContext);
   return (
     <section
       id="skills"
-      className="w-full dark:bg-slate-950 bg-slate-300 min-h-[768px] flex flex-col justify-center items-center gap-8"
+      className="w-full dark:bg-slate-950 bg-purple-300 min-h-screen flex flex-col justify-xtart items-center gap-8"
     >
       <div className="w-[90%] h-[90%] mt-12 mb-12 py-8 rounded-md flex flex-col items-center gap-6 md:gap-12">
         <div className="flex flex-col justify-center items-center gap-2">

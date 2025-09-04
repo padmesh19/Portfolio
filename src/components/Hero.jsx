@@ -1,6 +1,10 @@
 export default function Hero() {
+  console.log("hero");
   return (
-    <section className="w-full min-h-screen dark:bg-slate-950 bg-slate-300 flex justify-center items-center transition-all">
+    <section
+      id="hero"
+      className="w-full min-h-screen dark:bg-slate-950 bg-purple-300 flex justify-center items-center transition-all"
+    >
       <div className="w-[90%] h-[90%] mt-20 mb-12 flex flex-col lg:flex-row-reverse justify-center items-center gap-16">
         <img src="developer_image.png" className="w-64 md:w-sm lg:w-md" />
         <div className="text-center lg:text-left flex flex-col gap-4">
@@ -19,9 +23,9 @@ export default function Hero() {
             </h3>
           </div>
           <a
-            href="https://drive.google.com/file/d/1biWeZ_cjnkoTHu8C-knpPNn1vwZlBv84/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1ksunZQkmkbYEiYMaKvyd2CCcdEG95eSn/view?usp=sharing"
             target="_"
-            className="self-center lg:self-start px-4 mt-4 w-fit py-2 rounded-sm font-bold shadow-lg border-2 text-slate-900 dark:text-slate-200 border-slate-900 dark:border-slate-200 hover:bg-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-900 hover:text-slate-200"
+            className="self-center lg:self-start px-4 mt-4 w-fit py-2 rounded-full font-bold shadow-lg border-2 text-slate-900 dark:text-slate-200 border-slate-900 dark:border-slate-200 hover:bg-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-900 hover:text-slate-200"
             download
           >
             View Resume
